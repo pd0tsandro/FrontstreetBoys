@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>AscendStaff</title>
-	<link rel="icon" type="img/faveicon.ico">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<header class="header">
-		<div class="logo">
-			<a href="#">
-				<img src="img/logo.png" alt="">
-			</a>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AscendStaff Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">Ascend</a></h2>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18V11H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </label>
+        <ul class="all-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
 
-		<div class="navigation">
-			<input type="checkbox" class="toggle-menu">
-			<div class="hamburger"></div>
-			<ul class="menu">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Team</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
-	</header>
-
-	<section class="hero">
-		<div class="hero-content">
-			<div class="brand-name">
-				<h1>AscendStaff Services</h1>
-			</div>
-			<div class="subtext">
-				<p>Ascending Careers, Connecting Futures.</p>
-			</div>
-			<div class="business-link">
-				<a href="https://docs.google.com/document/d/1ByXGftjnh6ZDNEM-e2_oMuVKT-eR9b1IXmx0mU8d_Gc/edit?usp=sharing" target="_blank">Business Model</a>
-			</div>
-		</div>
-	</section>
-</body>
+    <section class="homepage" id="home">
+      <div class="content">
+        <div class="text">
+          <h1>AscendStaff Services</h1>
+          <p>
+            Ascending Careers, Connecting Futures.</p>
+        </div>
+        <a href="https://docs.google.com/document/d/1ByXGftjnh6ZDNEM-e2_oMuVKT-eR9b1IXmx0mU8d_Gc/edit?usp=sharing">Business Model</a>
+      </div>
+    </section>
+  </body>
 </html>
