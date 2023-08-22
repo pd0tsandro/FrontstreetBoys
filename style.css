@@ -399,14 +399,10 @@ section .cards {
 	
 }
 .btn button:hover{
-	background-color: #263a96;
+	background-color: #0f2043;
 	color: white;
 	transition: .3s;
 	cursor: pointer;
-}
-.btn .btn2{
-	background: #111111;
-	color:white;
 }
 
 /*  Our Team css */
@@ -531,8 +527,6 @@ section .cards {
       width: auto; 
     }
   }
-
-
 @media screen and (max-width: 860px) {
   section .cards .card {
     width: calc(50% - 20px);
