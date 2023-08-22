@@ -369,7 +369,7 @@ section .cards {
 }
 .cu-text h4{
 	font-size: 18px;
-	color: #777777;
+	color: #111111;
 	letter-spacing: 1px;
 	font-weight: 400;
 	margin-bottom: 10px;
@@ -382,7 +382,7 @@ section .cards {
 }
 .cu-text p{
 	font-size: 16px;
-	color: #777777;
+	color: #111111;
 	line-height: 30px;
 	margin-bottom: 35px;
 }
@@ -435,14 +435,14 @@ section .cards {
   }
 
 .center h1 {
-	color: #333333;
+	color: #111111;
 	font-size: 65px;
 	letter-spacing: 2px;
   margin-top: -50;
   }
 .center p{
 	font-size: 16px;
-	color: #777777;
+	color: #111111;
 	line-height: 30px;
 	margin-bottom: -10px;
   width: 950px;
