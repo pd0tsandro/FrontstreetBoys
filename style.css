@@ -172,7 +172,7 @@ section .cards {
 
 .about-us {
   display: flex;
-  flex-wrap: wrap-reverse; /* Reverse the order on smaller screens */
+  flex-wrap: wrap-reverse; 
   justify-content: space-between;
   align-items: center;
 }
@@ -345,16 +345,14 @@ section .cards {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('img/hero-image.jpg') center/cover;
 }
 
-
-.wrapper{
+.wrapper {
   width: 1170px;
   margin: 5% auto;
 }
 
-.wrapper h2{
+.wrapper h2 {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -363,9 +361,9 @@ section .cards {
   margin: 0;
 }
 
-.vision-mission{
+.vision-mission {
   position: relative;
-  width: 45% ;
+  width: 45%;
   height: 320px;
   background: #0f2043;
   box-sizing: border-box;
@@ -375,40 +373,42 @@ section .cards {
   float: left;
   margin: 0 10px;
   text-align: center;
-
 }
 
-.line{
+.vision-mission:hover {
+  background: #152e4d;
+}
+
+.line {
   width: 400px;
-  height:  3px;
-  background:#FDDB5B ;
-  margin: 0 auto 60px auto; 
+  height: 3px;
+  background: #FDDB5B;
+  margin: 0 auto 60px auto;
 }
 
-.vision-mission p{
+.vision-mission p {
   color: white;
   font-size: 20px;
   padding-top: 30px;
-
 }
 
-.vision-mission h3{
+.vision-mission h3 {
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 0px 0 0px 0;
   color: #FDDB5B;
 }
-.social{
-  width:  30px;
+
+.social {
+  width: 30px;
   height: 30px;
   background: gray;
   border-radius: 50%;
   margin: 5% auto;
 }
 
-
-.vision-mission span{
+.vision-mission span {
   position: absolute;
   top: 0;
   left: -110%;
@@ -418,11 +418,21 @@ section .cards {
   opacity: .4;
   transition: .8;
   transform: skew(10deg);
-
 }
+/*Vision mission media*/
+@media screen and (max-width: 768px) {
+  .brand-name {
+    font-size: 24px;
+  }
 
-.vision-mission:hover span{
-  left: 5%;
+  .subtext {
+    font-size: 14px;
+  }
+
+  .business-link a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
 
 
@@ -496,7 +506,75 @@ section .cards {
   cursor: pointer;
 }
 
+/* Sevices Section */
+.services {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
 
+.services h2 {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.services p {
+  font-size: 18px;
+  color: #888;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 40px 15px;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
+  width: calc(100% / 3 - 30px);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services .card img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.card p {
+  font-size: 18px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
 
 /*  Our Team css */
 .team{
@@ -508,7 +586,7 @@ section .cards {
   justify-content: center;
   flex-direction: column;
   text-align: center; 
-  margin-bottom: 200px;
+  margin-bottom: 10px;
   }
   .team-content{
   width: 100%;
@@ -587,91 +665,218 @@ section .cards {
   cursor: pointer;
   }
 
+
+  /* Frequently Asked Questions */
+.faqs {
+	
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px;
+  margin-top: 5px;
+}
+
+.faqs h1
+{
+	color: #0f2043;
+	font-size: 40px;
+	padding: 0 10px 21px;
+}
+@media (max-width: 768px) {
+    .faqs h1 {
+        font-size: 32px;
+        padding: 0 10px 15px;
+    }
+}
+@media (max-width: 480px) {
+    .faqs h1 {
+        font-size: 24px;
+        padding: 0 10px 10px;
+    }
+}
+.faqs .tab
+{
+	
+	position: relative;
+	background-color: #b8c6db;
+	padding: 0 20px 20px;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
+	overflow: hidden;
+	max-width: 80%;
+	font-size: 1em;
+	margin-right: 5px;
+	margin: 0 auto;
+}
+@media (max-width: 768px) {
+	.faqs .tab {
+        width: 90%; 
+        padding: 0 5px 5px; 
+    }
+}
+@media (max-width: 480px) {
+    .faqs .tab {
+        width: 95%; 
+        padding: 0 5px 5px;
+    }
+}
+.faqs .tab input
+{
+	appearance: none;
+	
+}
+.faqs .tab label
+{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	
+} 
+.faqs .tab label::after
+{
+	content: '+';
+	position: absolute;
+	right: 10px;
+	font-size: 1.5em;
+	color: rgba(0, 0, 0, 0.1);
+	transition: transform 1s;
+}
+.faqs .tab:hover label::after
+{
+	color: #FDDB5B;
+}
+.faqs .tab input:checked ~ label::after
+{
+	transform: rotate(135deg);
+	color: #fff;
+
+}
+.faqs .tab label h2
+{
+	width: 40px;
+	height: 40px;
+	background: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 1.25em;
+	border-radius: 5px;
+	margin-right: 10px;
+	min-width: 40px;
+}
+.faqs .tab input:checked ~ label h2
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: rgba(255, 255 ,255, 0.2);
+	font-size: 8em;
+	justify-content: flex-end;
+	padding: 20px;
+
+}
+
+.faqs .tab:nth-child(2) label h2
+{
+	background: #0f2043;
+}
+.faqs .tab:nth-child(3) label h2
+{
+	background: #0f2043;
+}
+.faqs .tab:nth-child(4) label h2
+{
+	background: #0f2043;
+}
+.faqs .tab:nth-child(5) label h2
+{
+	background: #0f2043;
+}
+
+.faqs .tab label h3
+{
+	position: relative;
+	font-weight: 500;
+	color: #fff;
+	z-index: 10;
+	font-weight: bold;
+}
+.faqs .tab input:checked ~ label h3
+{
+	padding: 2px 10px;
+	color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 5px rgba(0, 0, 0, 0.05);
+	
+}
+.faqs .tab .content
+{
+	max-height: 0;
+	transition: 1s;
+	overflow: hidden;	
+}
+.faqs .tab input:checked ~ .content
+{
+	max-height: 100vh;
+}
+.faqs .tab .content p
+{
+	position: relative;
+	padding: 10px 0;
+	color: #0f2043;
+	z-index: 10;
+}
+.faqs .tab input:checked ~ .content p
+{
+	color: #fff;
+}
+
+  
+
 /* footer css */
-.footer{
-  background: #0f2043 ;
-  padding-top: 40px;
+.footer {
+  background: #0f2043;
+  padding-top: 10px;
   color: white;
-
-}
-
-
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-}
-.footer-col h4{
-  font-size: 20px;
-  color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 25px;
-  font-weight: 500;
-  position: relative;
-}
-
-.footer-col ul li:not(:last-child){
-  margin-bottom: 10px;
-}
-
-.footer-col .socmed a{
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background:#FDDB5B  ;
-  margin:  0 10px 10px 0;
   text-align: center;
-  line-height: 10px;
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all .5s ease;
 }
 
-.footer-col .socmed a:hover{
-  color: #24262b;
-  background-color: #ffffff;
-}
-
-.footerbottom{
+.footerbottom {
   position: relative;
   background: #0f2043;
   padding: 20px 0;
-  text-align: right;
-  margin-right: 100px;
-
+  text-align: center; 
+  margin-right: 0; 
 }
 
-.footerbottom p{
+.footerbottom p {
   color: white;
   font-size: 14px;
-  word-spacing:  3px;
-  line-height: 1.5
-  text-transform: capitalize;
+  word-spacing: 3px;
+  line-height: 1.5;
   font-weight: 1000;
 }
-.footerbottom span{
+
+.footerbottom span {
   display: block;
   margin-top: 10px;
   color: white;
-  opacity: .5;
+  opacity: 0.5;
   font-weight: 200;
 }
 
 
 
-/*Vision mission media*/
-@media screen and (max-width: 768px) {
-  .brand-name {
-    font-size: 24px;
-  }
+/*Contact Us*/
 
-  .subtext {
-    font-size: 14px;
-  }
 
-  .business-link a {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
+
 
 
 /* Why Us media */
@@ -760,23 +965,3 @@ section .cards {
     max-height: 100%;
   }
 }
- /*footer media*/
-@media (max-width: 600px) {
-    .wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .vision-mission {
-        width: 95%;
-        margin: 0 auto 30px;
-        float: none; 
-    }
-
-    .wrapper h2 {
-        font-size: 30px;
-    }
-}
-
