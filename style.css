@@ -348,8 +348,10 @@ section .cards {
 }
 
 .wrapper {
-  width: 1170px;
+  max-width: 1170px;
+  width: 90%;
   margin: 5% auto;
+ 
 }
 
 .wrapper h2 {
@@ -363,7 +365,7 @@ section .cards {
 
 .vision-mission {
   position: relative;
-  width: 45%;
+  width: 100%;
   height: 320px;
   background: #0f2043;
   box-sizing: border-box;
@@ -421,17 +423,33 @@ section .cards {
 }
 /*Vision mission media*/
 @media screen and (max-width: 768px) {
-  .brand-name {
-    font-size: 24px;
+  .wrapper {
+    width: 90%; 
+    max-width: none; 
   }
 
-  .subtext {
-    font-size: 14px;
+  .wrapper h2 {
+    font-size: 40px; 
   }
 
-  .business-link a {
-    font-size: 14px;
-    padding: 8px 16px;
+  .vision-mission {
+    width: 100%; 
+    height: auto; 
+    margin: 10px 0; 
+    float: none; 
+  }
+
+  .line {
+    width: 250px; 
+  }
+
+  .vision-mission h3 {
+    font-size: 28px; 
+  }
+
+  .vision-mission p {
+    padding-top: 20px; 
+    font-size: 16px; 
   }
 }
 
@@ -506,75 +524,101 @@ section .cards {
   cursor: pointer;
 }
 
-/* Sevices Section */
-.services {
-  text-align: center;
-  padding: 80px 0;
-  background-color: #f5f5f5;
+/* Styles for Services Section */
+.services-section {
+  height: auto;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
-.services h2 {
-  font-size: 70px;
-  margin-bottom: 10px;
-}
-
-.services p {
-  font-size: 18px;
-  color: #888;
-}
-
-.cards {
+.services-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
 }
 
-.card {
-  background-color: #fff;
-  padding: 40px 15px;
-  list-style: none;
-  border-radius: 5px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
-  margin-bottom: 40px;
-  width: calc(100% / 3 - 30px);
+.service-column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+.section-heading 
+{
+color: #0f2043;
+font-size: 40px;
+padding: 0 10px 21px;
 }
 
-.services .card img {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 20px;
-  border-radius: 100%;
-  object-fit: cover;
+.service-card {
+  border: 1px solid #b8c6db;
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #0f2043 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.card h3 {
-  font-size: 24px;
-  margin-top: 15px;
+.service-card:hover {
+  background-position-y: 100%;
 }
 
-.card p {
-  font-size: 18px;
-  color: #555;
+.service-icon {
+  background-color: #0f2043;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #b8c6db;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
+.service-icon i {
+  font-size: 50px;
+}
+
+.service-card:hover .service-icon {
+  background-color: #b8c6db;
+  color: #0f2043;
+}
+
+.service-card:hover h3 {
+  color: #b8c6db;
+}
+
+.service-card:hover p {
+  color: #f0f0f0;
+}
+
+@media screen and (min-width: 768px) {
+  .services-section {
+      padding: 0 2em;
   }
-
-  .card {
-    width: 80%;
-    margin: 20px auto;
+  .service-column {
+      flex: 0 50%;
+      max-width: 50%;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .services-section {
+      padding: 1em 3em;
+  }
+  .service-column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+  }
+}
+
 
 /*  Our Team css */
 .team{
@@ -667,8 +711,9 @@ section .cards {
 
 
   /* Frequently Asked Questions */
-.faqs {
-	
+.faq-container
+{
+	/*background: url('img/hero-image.jpg') center/cover; */
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -676,28 +721,27 @@ section .cards {
 	flex-direction: column;
 	gap: 20px;
 	padding: 20px;
-  margin-top: 5px;
 }
 
-.faqs h1
+.faq-container h1
 {
 	color: #0f2043;
 	font-size: 40px;
 	padding: 0 10px 21px;
 }
 @media (max-width: 768px) {
-    .faqs h1 {
+    .faq-container h1 {
         font-size: 32px;
         padding: 0 10px 15px;
     }
 }
 @media (max-width: 480px) {
-    .faqs h1 {
+    .faq-container h1 {
         font-size: 24px;
         padding: 0 10px 10px;
     }
 }
-.faqs .tab
+.faq-tab
 {
 	
 	position: relative;
@@ -712,30 +756,30 @@ section .cards {
 	margin: 0 auto;
 }
 @media (max-width: 768px) {
-	.faqs .tab {
+	.faq-tab {
         width: 90%; 
         padding: 0 5px 5px; 
     }
 }
 @media (max-width: 480px) {
-    .faqs .tab {
+    .faq-tab {
         width: 95%; 
         padding: 0 5px 5px;
     }
 }
-.faqs .tab input
+.faq-tab input
 {
 	appearance: none;
 	
 }
-.faqs .tab label
+.faq-tab label
 {
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 	
 } 
-.faqs .tab label::after
+.faq-tab label::after
 {
 	content: '+';
 	position: absolute;
@@ -744,17 +788,17 @@ section .cards {
 	color: rgba(0, 0, 0, 0.1);
 	transition: transform 1s;
 }
-.faqs .tab:hover label::after
+.faq-tab:hover label::after
 {
 	color: #FDDB5B;
 }
-.faqs .tab input:checked ~ label::after
+.faq-tab input:checked ~ label::after
 {
 	transform: rotate(135deg);
 	color: #fff;
 
 }
-.faqs .tab label h2
+.faq-tab label h2
 {
 	width: 40px;
 	height: 40px;
@@ -768,7 +812,7 @@ section .cards {
 	margin-right: 10px;
 	min-width: 40px;
 }
-.faqs .tab input:checked ~ label h2
+.faq-tab input:checked ~ label h2
 {
 	position: absolute;
 	top: 0;
@@ -782,24 +826,24 @@ section .cards {
 
 }
 
-.faqs .tab:nth-child(2) label h2
+.faq-tab:nth-child(2) label h2
 {
 	background: #0f2043;
 }
-.faqs .tab:nth-child(3) label h2
+.faq-tab:nth-child(3) label h2
 {
 	background: #0f2043;
 }
-.faqs .tab:nth-child(4) label h2
+.faq-tab:nth-child(4) label h2
 {
 	background: #0f2043;
 }
-.faqs .tab:nth-child(5) label h2
+.faq-tab:nth-child(5) label h2
 {
 	background: #0f2043;
 }
 
-.faqs .tab label h3
+.faq-tab label h3
 {
 	position: relative;
 	font-weight: 500;
@@ -807,7 +851,7 @@ section .cards {
 	z-index: 10;
 	font-weight: bold;
 }
-.faqs .tab input:checked ~ label h3
+.faq-tab input:checked ~ label h3
 {
 	padding: 2px 10px;
 	color: #fff;
@@ -815,27 +859,34 @@ section .cards {
 	box-shadow: 0 5px rgba(0, 0, 0, 0.05);
 	
 }
-.faqs .tab .content
+.faq-content
 {
+  opacity: 0;
 	max-height: 0;
-	transition: 1s;
+	transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;;
 	overflow: hidden;	
 }
-.faqs .tab input:checked ~ .content
+.faq-tab input:checked ~ .faq-content
 {
-	max-height: 100vh;
+	max-height: 100%;
+  opacity: 1;
 }
-.faqs .tab .content p
+.faq-tab .faq-content p
 {
 	position: relative;
 	padding: 10px 0;
 	color: #0f2043;
 	z-index: 10;
 }
-.faqs .tab input:checked ~ .content p
+.faq-tab input:checked ~ .faq-content p
 {
 	color: #fff;
+  margin-bottom: 1rem;
 }
+.faq-tab .faq-content p:last-child {
+  margin-bottom: 0; 
+}
+
 
   
 
