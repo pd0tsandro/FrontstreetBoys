@@ -345,16 +345,16 @@ section .cards {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('img/hero-image.jpg') center/cover;
 }
 
-.wrapper {
-  max-width: 1170px;
-  width: 90%;
+
+.wrapper{
+  width: 1170px;
   margin: 5% auto;
- 
 }
 
-.wrapper h2 {
+.wrapper h2{
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -363,9 +363,9 @@ section .cards {
   margin: 0;
 }
 
-.vision-mission {
+.vision-mission{
   position: relative;
-  width: 100%;
+  width: 45% ;
   height: 320px;
   background: #0f2043;
   box-sizing: border-box;
@@ -375,42 +375,40 @@ section .cards {
   float: left;
   margin: 0 10px;
   text-align: center;
+
 }
 
-.vision-mission:hover {
-  background: #152e4d;
-}
-
-.line {
+.line{
   width: 400px;
-  height: 3px;
-  background: #FDDB5B;
-  margin: 0 auto 60px auto;
+  height:  3px;
+  background:#FDDB5B ;
+  margin: 0 auto 60px auto; 
 }
 
-.vision-mission p {
+.vision-mission p{
   color: white;
   font-size: 20px;
   padding-top: 30px;
+
 }
 
-.vision-mission h3 {
+.vision-mission h3{
   font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 0px 0 0px 0;
   color: #FDDB5B;
 }
-
-.social {
-  width: 30px;
+.social{
+  width:  30px;
   height: 30px;
   background: gray;
   border-radius: 50%;
   margin: 5% auto;
 }
 
-.vision-mission span {
+
+.vision-mission span{
   position: absolute;
   top: 0;
   left: -110%;
@@ -420,37 +418,31 @@ section .cards {
   opacity: .4;
   transition: .8;
   transform: skew(10deg);
+
 }
+
+.vision-mission:hover span{
+  left: 5%;
+}
+
 /*Vision mission media*/
-@media screen and (max-width: 768px) {
-  .wrapper {
-    width: 90%; 
-    max-width: none; 
-  }
+@media (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .wrapper h2 {
-    font-size: 40px; 
-  }
+    .vision-mission {
+        width: 95%;
+        margin: 0 auto 30px;
+        float: none; 
+    }
 
-  .vision-mission {
-    width: 100%; 
-    height: auto; 
-    margin: 10px 0; 
-    float: none; 
-  }
-
-  .line {
-    width: 250px; 
-  }
-
-  .vision-mission h3 {
-    font-size: 28px; 
-  }
-
-  .vision-mission p {
-    padding-top: 20px; 
-    font-size: 16px; 
-  }
+    .wrapper h2 {
+        font-size: 30px;
+    }
 }
 
 
@@ -480,7 +472,7 @@ section .cards {
 .main{
   width: 1290px;
   max-width: 95%;
-  margin: 0 auto;
+  margin: 15% auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
