@@ -622,64 +622,74 @@ padding: 0 10px 21px;
   justify-content: center;
   flex-direction: column;
   text-align: center; 
-  margin-bottom: 10px;
   }
   .team-content{
-  width: 100%;
-  max-width: 1350px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, auto)); 
-  align-items: center;
-  gap: 2rem;
-  text-align: center;
-  margin-top: 4rem;
+	width: 100%;
+	max-width: 1350px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns:repeat(auto-fit, minmax(200px, auto)); 
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+	margin-top: 4rem;
   }
   .team-content img{
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  margin-bottom: 15px;
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	margin-bottom: 15px;
   }
 
 .center h1 {
-  color: #111111;
-  font-size: 65px;
-  letter-spacing: 2px;
+	color: #111111;
+	font-size: 65px;
+	letter-spacing: 2px;
   margin-top: -50;
   }
 .center p{
-  font-size: 16px;
-  color: #111111;
-  line-height: 30px;
-  margin-bottom: -10px;
+	font-size: 16px;
+	color: #111111;
+	line-height: 30px;
+	margin-bottom: -10px;
   width: 950px;
 }
   .box{
-  padding: 17px;
-  background: #141d31;
-  border-radius: 15px;
-  transition: all .38s ease;
+	padding: 17px;
+	background: #141d31;
+	border-radius: 15px;
+	transition: all .38s ease;
   }
   .box h3{
-  font-size: 23px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 8px;
+	font-size: 23px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 8px;
   }
   .box h5{
-  font-size: 15px;
-  font-weight: 600;
-  color: #b7b4bb;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #b7b4bb;
+	margin-bottom: 15px;
+	letter-spacing: 2px;
   }
+
+  .team-content img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	margin-bottom: 15px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  .team-content img:hover {
+	transform: scale(1.05); 
+	box-shadow: 0px 10px 20px rgba(156, 245, 201, 0.418); 
+  }
+
   .box:hover{
-  transform: translateY(-10px);
-  cursor: pointer;
+	transform: translateY(-10px);
+	cursor: pointer;
   }
-
-
   /* Frequently Asked Questions */
 .faq-container
 {
