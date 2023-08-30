@@ -535,12 +535,15 @@ section .cards {
   justify-content: center;
   flex-direction: column;
 }
-.choose-us .main img{
+.choose-us .main .DV{
   width: 580px;
   max-width: 100%;
   height: auto;
   padding: 0 10px;
   border-radius: 40px;
+}
+.choose-us .main .MV {
+  display: none; 
 }
 .cu-text{
   width: 600px;
@@ -693,7 +696,6 @@ padding: 0 10px 21px;
 
 /*  Our Team css */
 .team{
-
   width: 100%;
   height: 100vh;
   display: flex;
@@ -1002,17 +1004,30 @@ padding: 0 10px 21px;
     margin-top: 40px;
   }
   }
-  @media screen  and (max-width:650px){
-  .choose-us .main img{
+  @media screen  and (max-width:768px){
+  .choose-us .main .DV{
+    display: none;
+  }
+  .choose-us .main .MV{
+    display: block; 
+    border-radius: 20px;
     margin-bottom: 35px;
   }
   .cu-text h1{
     font-size: 45px;
     margin-bottom: 20px;
+    color: #FFFFFF;
   }
+  .cu-text h4{
+    color: #FFFFFF;
+  }
+  .cu-text p{
+    color: #FFFFFF;
+  }
+
   }
    /* Our Team media */
-   @media (max-width: 1240px) {
+   @media (max-width: 768px) {
     .team {
       width: 100%;
       height: auto;
@@ -1020,10 +1035,18 @@ padding: 0 10px 21px;
     }
     .center h1 {
       font-size: 3.2rem;
+      color: #FFFFFF;
     }
     .center p {
       width: auto; 
+      color: #FFFFFF;
     }
+    .box{
+      background: #FFFFFF;
+    }
+    .box h3{
+      color: #8AAAE5;
+      }
   }
 @media screen and (max-width: 860px) {
   section .cards .card {
