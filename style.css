@@ -506,6 +506,10 @@ section .cards {
 
 /*Vision mission media*/
 @media (max-width: 600px) {
+
+    .vm{
+      background: #FFFFFF;
+    }
     .wrapper {
         width: 100%;
         display: flex;
@@ -517,10 +521,35 @@ section .cards {
         width: 95%;
         margin: 0 auto 30px;
         float: none; 
+        background: #8AAAE5;
+    }
+
+    .vision-mission h3 {
+        color: #FFFFFF; 
+    }
+
+    .vision-mission p {
+        color: #FFFFFF; 
+        font-size: 18px; 
+    }
+
+    .line {
+        background: transparent; 
     }
 
     .wrapper h2 {
         font-size: 30px;
+        color: #0f2043;
+    }
+
+    .vision-mission span {
+        left: 5%;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .vision-mission:hover span {
+        left: -110%;
     }
 }
 
@@ -983,6 +1012,25 @@ padding: 0 10px 21px;
   font-weight: 200;
 }
 
+/* footer media */
+@media (max-width: 768px) {
+
+  .footer{
+    background: #8AAAE5; 
+  }
+
+  .footerbottom {
+    background: #8AAAE5; 
+  }
+  .footerbottom p {
+    font-size: 12px;
+    word-spacing: 2px;
+  }
+
+  .footerbottom span {
+    font-size: 12px;
+  }
+}
 
 
 
