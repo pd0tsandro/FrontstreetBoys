@@ -764,7 +764,7 @@ padding: 0 10px 21px;
 }
 
 .service-card {
-  border: 1px solid #b8c6db;
+  border: 3px solid #b8c6db;
   width: 100%;
   height: 100%;
   padding: 2em 1.5em;
@@ -781,27 +781,10 @@ padding: 0 10px 21px;
   background-position-y: 100%;
 }
 
-.service-icon {
-  background-color: #0f2043;
-  position: relative;
-  margin: auto;
-  font-size: 30px;
-  height: 2.5em;
-  width: 2.5em;
-  color: #b8c6db;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.service-icon i {
-  font-size: 50px;
-}
-
-.service-card:hover .service-icon {
-  background-color: #b8c6db;
-  color: #0f2043;
+.service-card img {
+  width: 20%; 
+  height: auto; 
+  border-radius: 5px;
 }
 
 .service-card:hover h3 {
@@ -831,7 +814,23 @@ padding: 0 10px 21px;
       max-width: 33.33%;
   }
 }
-
+@media screen and (max-width: 767px) {
+  .section-heading {
+    color: #ffffff;
+  }
+  .service-card h3 {
+    color: #ffffff;
+  }
+  .service-card p {
+    color: #ffffff; 
+  }
+  .service-card {
+    background: #8AAAE5;
+  }
+  .service-card:hover h3 {
+    color: #111111;
+  }
+}
 
 /*  Our Team css */
 .team{
